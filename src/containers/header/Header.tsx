@@ -1,35 +1,4 @@
-import { Button, SectionBox, Star } from "../../components";
-import { FloatStarProps, WordProps } from "./Header.types";
-
-const FloatStar = ({ top, left, right, bottom }: FloatStarProps) => (
-  <div
-    style={{
-      position: "absolute",
-      top: `${top}px`,
-      left: `${left}px`,
-      bottom: `${bottom}px`,
-      right: `${right}px`,
-    }}
-  >
-    <Star />
-  </div>
-);
-
-const Word = ({
-  content,
-  hasShape = false,
-  shapeColor = "gary",
-}: WordProps) => (
-  <h1 className="text-6xl text-black font-extrabold relative z-0 max-w-max hero-title">
-    {content}
-    {hasShape && (
-      <span
-        style={{ backgroundColor: shapeColor }}
-        className="absolute -inset-1 -skew-y-2 -z-10 w-[130%]"
-      />
-    )}
-  </h1>
-);
+import { Button, SectionBox, Star, Word } from "../../components";
 
 const LeftSide = () => (
   <div className="w-[40%] flex flex-col gap-4">
@@ -50,10 +19,10 @@ const LeftSide = () => (
 const RightSide = () => (
   <div className="flex-1 flex justify-center relative">
     <img src="assets/hero.png" alt="hero" className="w-3/4" />
-    <FloatStar top={20} left={30} />
-    <FloatStar bottom={40} left={70} />
-    <FloatStar top={40} right={120} />
-    <FloatStar bottom={70} right={70} />
+    <Star top={20} left={30} color="#E7E6E6" />
+    <Star bottom={40} left={70} color="#E7E6E6" />
+    <Star top={40} right={120} color="#E7E6E6" />
+    <Star bottom={70} right={70} color="#E7E6E6" />
   </div>
 );
 

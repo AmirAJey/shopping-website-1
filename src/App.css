@@ -1,3 +1,7 @@
-.hero-title {
+.poppins-font {
   font-family: 'Poppins', sans-serif !important;
+}
+
+button {
+  all: unset;
 }

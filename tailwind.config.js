@@ -8,6 +8,7 @@ module.exports = {
       backgroundColor: {
         "main-light-primary": '#fff',
         "main-light-secondary": '#F4F6F5',
+        "main-light-third": '#EBD96B',
         "btn-light-primary": '#fff',
         "btn-light-secondary": '#000',
       },

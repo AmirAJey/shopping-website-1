@@ -15,9 +15,19 @@ const NavbarLink = ({
   return (
     <a
       href={destination}
-      className={`uppercase rounded-lg px-3 py-2 text-sm ${style}`}
+      className={`uppercase rounded-lg px-3 py-2 text-sm group relative ${style}`}
     >
       {label}
+      {variant === "primary" ? (
+        <span
+          className="
+          absolute left-0 -bottom-1
+          h-1 w-0 bg-main-light-third
+          group-hover:w-full
+          transition-all duration-300
+          "
+        />
+      ) : null}
     </a>
   );
 };

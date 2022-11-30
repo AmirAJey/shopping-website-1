@@ -1,35 +1,33 @@
-import React from "react";
-
-type FloatStarTopLeft = {
+type StarTopLeft = {
   top: number;
   left: number;
   bottom?: never;
   right?: never;
 };
 
-type FloatStarTopRight = {
+type StarTopRight = {
   top: number;
   right: number;
   bottom?: never;
   left?: never;
 };
 
-type FloatStarBottomLeft = {
+type StarBottomLeft = {
   bottom: number;
   left: number;
   top?: never;
   right?: never;
 };
 
-type FloatStarBottomRight = {
+type StarBottomRight = {
   bottom: number;
   right: number;
   top?: never;
   left?: never;
 };
 
-export type FloatStarProps =
-  | FloatStarTopLeft
-  | FloatStarTopRight
-  | FloatStarBottomLeft
-  | FloatStarBottomRight;
+export type StarProps = {
+  hasRotate?: boolean;
+  color?: React.CSSProperties["color"];
+  size?: "md" | "lg";
+} & (StarTopLeft | StarTopRight | StarBottomLeft | StarBottomRight);
